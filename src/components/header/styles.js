@@ -74,7 +74,13 @@ export const UserPicture = styled.img`
 
 export const Input = styled.input`
     background: transparent;
+    height: 100%;
     flex: 1;
     border: 0;
     color: #FFFFFF;
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0;
+    }
 `
