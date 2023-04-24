@@ -3,22 +3,32 @@ import {BuscarInputContainer, Column, Container, Input, Menu, MenuRight, UserPic
 import Button from '../button'
 import logo from '../../assets/logo-dio.png'
 
-export default function Header() {
+export default function Header({autenticado}) {
   return (
     <Wrapper>
         <Container>
             <Row>
                 <img src={logo} alt='Logo da DIO'></img>
-                <BuscarInputContainer>
-                    <Input placeholder='Buscar...' ></Input>
-                </BuscarInputContainer>
-                <Menu>Live Code</Menu>
-                <Menu>Global</Menu>
+                {autenticado ? (
+                    <>
+                        <BuscarInputContainer>
+                        <Input placeholder='Buscar...'></Input>
+                        </BuscarInputContainer>
+                        <Menu>Live Code</Menu>
+                        <Menu>Global</Menu>
+                    </>
+                ):null}
             </Row>
             <Row>
-                <MenuRight href='#' >Home</MenuRight>
-                <Button>Entrar</Button>
-                <Button>Cadastrar</Button>
+                {autenticado ? (
+                    <UserPicture src='https://avatars.githubusercontent.com/u/115962863?v=4' />
+                ) : (
+                    <>
+                        <MenuRight href='#' >Home</MenuRight>
+                        <Button>Entrar</Button>
+                        <Button>Cadastrar</Button>
+                    </>
+                )}
             </Row>
         </Container>
     </Wrapper>

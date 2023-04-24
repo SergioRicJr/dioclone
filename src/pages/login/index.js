@@ -3,8 +3,15 @@ import Button from "../../components/button";
 import Header from "../../components/header";
 import {Row ,Container, Column, CriarText, EsqueciText, Title, TitleLogin, SubTitleLogin, Wrapper} from "./styles";
 import Input from "../../components/input";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate()
+
+  const handleClickSign = () => {
+    navigate('/feed')
+  }
+
   return (
     <>
         <Header></Header>
@@ -22,7 +29,7 @@ export default function Login() {
               <form>
                 <Input placeholder="E-mail" leftIcon={<MdEmail/>} />
                 <Input placeholder="Senha" leftIcon={<MdLock/>} />
-                <Button variant="secondary" >Entrar</Button>
+                <Button variant="secondary" onClick={handleClickSign} type="button">Entrar</Button>
               </form>
               <Row>
                 <EsqueciText>Esqueci minha senha</EsqueciText>

@@ -3,8 +3,15 @@ import Button from "../../components/button";
 import Header from "../../components/header";
 import { Container, TextContent, Title, TitleHighlight } from "./styles";
 import banner from '../../assets/banner.png'
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate()
+
+  const handleClickSign = () => {
+    navigate('/login')
+  }
+
   return (
     <>
         <Header></Header>
