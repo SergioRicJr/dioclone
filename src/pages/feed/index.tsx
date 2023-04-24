@@ -3,7 +3,7 @@ import Button from "../../components/button";
 import Header from "../../components/header";
 import { Container, Column, Title, TitleHighlight } from "./styles";
 import banner from '../../assets/banner.png'
-import Card from "../../components/card/styles";
+import Card from "../../components/card/index";
 import UserInfo from "../../components/userinfo";
 
 export default function Feed() {

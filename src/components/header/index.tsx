@@ -1,9 +1,12 @@
 import React from 'react'
 import {BuscarInputContainer, Column, Container, Input, Menu, MenuRight, UserPicture, Wrapper, Row} from './styles'
 import Button from '../button'
-import logo from '../../assets/logo-dio.png'
 
-export default function Header({autenticado}) {
+//erro abaixo ocorre pq o ts diz que png não é um módulo
+import logo from '../../assets/logo-dio.png'
+import { IHeader } from './types'
+
+export default function Header({autenticado}:IHeader) {
   return (
     <Wrapper>
         <Container>

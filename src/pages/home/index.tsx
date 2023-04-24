@@ -28,7 +28,7 @@ export default function Home() {
               Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo desafio profissional
               , evoluindo em comunidade com os melhores experts.
             </TextContent>
-            <Button variant="secondary" onClick={()=> null}>Começar agora</Button>
+            <Button variant="secondary" onClick={() => null}>Começar agora</Button>
           </div>
           <div>
             <img src={banner} alt=""></img>

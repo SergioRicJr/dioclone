@@ -77,6 +77,8 @@ export const Row = styled.div`
     margin-top: 20px;
 `
 
+
+
 export const TextContent = styled.p`
     font-family: 'Open-Sans';
     font-family: normal;

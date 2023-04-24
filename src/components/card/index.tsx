@@ -1,4 +1,4 @@
-import { CardContainer, Content, HasInfo, ImageBackground, PostInfo, UserInfo, UserPicture } from "."
+import { CardContainer, Content, HasInfo, ImageBackground, PostInfo, UserInfo, UserPicture } from "./styles"
 import {FiThumbsUp} from 'react-icons/fi'
 
 export default function Card() {
