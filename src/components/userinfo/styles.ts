@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IUserInfo, IUserInfoStyle } from './types';
+import { IUserInfoStyle } from './types';
 
 export const Container = styled.div`
     display:flex;

@@ -43,9 +43,9 @@ export default function Login() {
     }
   }
 
-  const handleClickSign = () => {
-    navigate('/feed')
-  }
+  // const handleClickSign = () => {
+  //   navigate('/feed')
+  // }
 
   return (
     <>

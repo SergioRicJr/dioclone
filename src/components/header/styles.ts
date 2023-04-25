@@ -15,6 +15,7 @@ export const Row = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 `
 
 export const Column = styled.div`
@@ -33,7 +34,7 @@ export const Wrapper = styled.div`
 `
 
 export const BuscarInputContainer = styled.div`
-    width: 175px;
+    width: 275px;
     height: 30px;
     background: #202037;
     border-radius: 8px;

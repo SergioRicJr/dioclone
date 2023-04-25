@@ -66,7 +66,7 @@ export const Wrapper = styled.div`
 `
 
 export const Column = styled.div`
-    flex: 1;
+    
 `
 
 export const Row = styled.div`

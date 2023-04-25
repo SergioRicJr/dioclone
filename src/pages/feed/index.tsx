@@ -1,8 +1,8 @@
 // import { Link } from "react-router-dom";
-import Button from "../../components/button";
+// import Button from "../../components/button";
 import Header from "../../components/header";
-import { Container, Column, Title, TitleHighlight } from "./styles";
-import banner from '../../assets/banner.png'
+import { Container, Column, ColumnMy, Title, TitleHighlight } from "./styles";
+// import banner from '../../assets/banner.png'
 import Card from "../../components/card/index";
 import UserInfo from "../../components/userinfo";
 
@@ -15,10 +15,10 @@ export default function Feed() {
             <Title>Feed</Title>
             <Card/>
           </Column>
-          <Column flex={1}>
+          <ColumnMy flex={1}>
             <TitleHighlight>#Ranking top 5 da semana</TitleHighlight>
             <UserInfo percentual={35} name="Sergio" image="https://avatars.githubusercontent.com/u/115962863?v=4"/>
-          </Column>
+          </ColumnMy>
           
         </Container>
       

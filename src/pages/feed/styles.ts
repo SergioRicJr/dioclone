@@ -43,5 +43,9 @@ export const TextContent = styled.p`
 //define o valor do flex como o flex passado como atributo da tag
 export const Column = styled.div<IColumn>`
     flex: ${({flex})=> flex};
-    padding-right: 24px;
+    padding-right: 70px;
+`
+
+export const ColumnMy = styled.div<IColumn>`
+    flex: ${({flex})=> flex};
 `
