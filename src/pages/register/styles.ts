@@ -16,7 +16,7 @@ export const Title = styled.h2`
     font-family: normal;
     font-weight: 700;
     font-size: 32px;
-    width: 320px;
+    width: 400px;
     margin-bottom: 20px;
     line-height: 44px;
 
@@ -25,7 +25,7 @@ export const Title = styled.h2`
 
 export const ColumnOne = styled.div<IColumn>`
     ${({flex})=> flex };
-    padding-right: 70px;
+    margin-right: 70px;
 `
 
 export const ColumnTwo = styled.div<IColumn>`
@@ -49,4 +49,9 @@ export const SubTitleLogin = styled.p`
     width: 320px;
     margin-bottom: 35px;
     line-height: 25px;
+`
+
+export const CaixaText = styled.p`
+    width: 320px;
+    margin-top: 20px;
 `

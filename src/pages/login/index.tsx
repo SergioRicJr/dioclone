@@ -63,7 +63,7 @@ export default function Login() {
           </Column>
           <Column>
             <Wrapper>
-              <TitleLogin>Faç a seu cadastro</TitleLogin>
+              <TitleLogin>Faça seu login</TitleLogin>
               <SubTitleLogin>Faça seu login e make the change</SubTitleLogin>
               <form onSubmit={handleSubmit(onSubmit)} > 
                 <Input errorMessage={errors.email?.message} name="email" control={control} placeholder="E-mail" leftIcon={<MdEmail/>} />

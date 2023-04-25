@@ -12,6 +12,11 @@ export const ButtonContainer = styled.button<IButtonStyled>`
     min-width: 120px;
     width: 100%;
 
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
     
     ${
         //da pra passar funcoes dentro da template string, usando props nessa
@@ -23,11 +28,6 @@ export const ButtonContainer = styled.button<IButtonStyled>`
             height: 33px;
 
             background: #E41050;
-
-            &:hover {
-                opacity: 0.6;
-                cursor: pointer;
-            }
 
             &::after{
                 content: '';

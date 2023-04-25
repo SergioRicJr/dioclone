@@ -64,6 +64,11 @@ export const MenuRight = styled.a`
     color: #ffffff;
     margin-height: 12px;
     text-decoration: none;
+
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
 `
 
 export const UserPicture = styled.img`
@@ -85,3 +90,4 @@ export const Input = styled.input`
         box-shadow: 0;
     }
 `
+
