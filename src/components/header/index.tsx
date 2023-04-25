@@ -7,9 +7,10 @@ import logo from '../../assets/logo-dio.png'
 import { useNavigate } from 'react-router'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/auth'
+import { useAuth } from '../../hooks/useAuth'
 
 export default function Header() {
-    const {user, handleSignOut} = useContext(AuthContext)
+    const {user, handleSignOut} = useAuth()
     
     const navigate = useNavigate()
 

@@ -11,6 +11,7 @@ import { api } from '../../services/api';
 import { IFormData } from './types';
 import {useContext} from 'react'
 import { AuthContext } from '../../context/auth';
+import { useAuth } from '../../hooks/useAuth';
 
 // opcao min define que deve ter no minimo de caracteres 
 // no segundo parametro de min -- passa a mensagem
@@ -28,7 +29,7 @@ export default function Login() {
   })
   console.log(isValid, errors)
 
-  const {handleLogin} = useContext(AuthContext)
+  const {handleLogin} = useAuth()
 
   const onSubmit = async (dados: IFormData) => {
     handleLogin(dados)
