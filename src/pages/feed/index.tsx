@@ -5,11 +5,16 @@ import { Container, Column, ColumnMy, Title, TitleHighlight } from "./styles";
 // import banner from '../../assets/banner.png'
 import Card from "../../components/card/index";
 import UserInfo from "../../components/userinfo";
+import { AuthContext } from "../../context/auth";
+import { useContext } from "react";
+import { IUser } from "../../types/user";
 
 export default function Feed() {
+  
+
   return (
     <>
-        <Header autenticado={true} ></Header>
+        <Header></Header>
         <Container>
           <Column flex={3}>
             <Title>Feed</Title>

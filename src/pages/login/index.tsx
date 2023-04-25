@@ -9,6 +9,8 @@ import * as yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup'
 import { api } from '../../services/api';
 import { IFormData } from './types';
+import {useContext} from 'react'
+import { AuthContext } from '../../context/auth';
 
 // opcao min define que deve ter no minimo de caracteres 
 // no segundo parametro de min -- passa a mensagem
@@ -26,21 +28,10 @@ export default function Login() {
   })
   console.log(isValid, errors)
 
+  const {handleLogin} = useContext(AuthContext)
+
   const onSubmit = async (dados: IFormData) => {
-    try {
-      const {data} = await api.get(`users?email=${dados.email}&password=${dados.password}`)
-      if (data.length ===1) {
-        console.log("encotrado")
-        navigate("/feed")
-      } else {
-        console.log("Email ou senha inválidos")
-      }
-      console.log(dados)
-      console.log(data)
-    } catch(error) {
-      console.log(error)
-      alert("Houve um erro, tente novamente")
-    }
+    handleLogin(dados)
   }
 
   // const handleClickSign = () => {

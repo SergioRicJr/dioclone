@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 
 //erro abaixo ocorre pq o ts diz que png não é um módulo
 import logo from '../../assets/logo-dio.png'
-import { IHeader } from './types'
 import { useNavigate } from 'react-router'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/auth'
 
-export default function Header({autenticado}:IHeader) {
+export default function Header() {
+    const {user, handleSignOut} = useContext(AuthContext)
+    
     const navigate = useNavigate()
 
     const handleNavLogin = ()=> {
@@ -26,8 +29,10 @@ export default function Header({autenticado}:IHeader) {
         <Wrapper>
             <Container>
                 <Row>
-                    <img src={logo} alt='Logo da DIO'></img>
-                    {autenticado ? (
+                    <Link to={'/'}>
+                        <img src={logo} alt='Logo da DIO'></img>
+                    </Link>
+                    {user.id ? (
                         <>
                             <BuscarInputContainer>
                             <Input placeholder='Buscar...'></Input>
@@ -38,8 +43,11 @@ export default function Header({autenticado}:IHeader) {
                     ):null}
                 </Row>
                 <Row>
-                    {autenticado ? (
-                        <UserPicture src='https://avatars.githubusercontent.com/u/115962863?v=4' />
+                    {user.id ? (
+                        <>
+                            <UserPicture src='https://avatars.githubusercontent.com/u/115962863?v=4' />
+                            <a href='/login' onClick={handleSignOut}>Sair</a>
+                        </>
                     ) : (
                         <>
                             <MenuRight onClick={handleNavHome} >Home</MenuRight>
