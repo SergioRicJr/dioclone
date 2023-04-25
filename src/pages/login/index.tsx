@@ -47,6 +47,10 @@ export default function Login() {
   //   navigate('/feed')
   // }
 
+  const handleClickRegister = () => {
+    navigate("/register")
+  }
+
   return (
     <>
         <Header></Header>
@@ -68,7 +72,7 @@ export default function Login() {
               </form>
               <Row>
                 <EsqueciText>Esqueci minha senha</EsqueciText>
-                <CriarText>Criar conta</CriarText>
+                <CriarText onClick={handleClickRegister} >Criar conta</CriarText>
               </Row>
             </Wrapper>
           </Column>

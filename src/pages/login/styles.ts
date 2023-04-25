@@ -48,8 +48,12 @@ export const EsqueciText = styled.p`
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
     color: #e5e044;
+
+    &:hover {
+        cursor: pointer;
+        
+    }
 `
 export const CriarText = styled.p`
     font-family: 'Open Sans';
@@ -57,8 +61,12 @@ export const CriarText = styled.p`
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
     color: #e23dd7;
+
+    &:hover {
+        cursor: pointer;
+        
+    }
 `
 
 export const Wrapper = styled.div`

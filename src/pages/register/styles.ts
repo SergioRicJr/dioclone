@@ -1,5 +1,52 @@
 import styled from "styled-components";
+import {IColumn} from '../feed/types'
 
-const Container = styled.main`
+export const Container = styled.main`
+    max-width: 80%;
 
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 120px;
+`
+
+export const Title = styled.h2`
+    font-family: 'Open Sans';
+    font-family: normal;
+    font-weight: 700;
+    font-size: 32px;
+    width: 320px;
+    margin-bottom: 20px;
+    line-height: 44px;
+
+    color: #FFFFFF;
+`
+
+export const ColumnOne = styled.div<IColumn>`
+    ${({flex})=> flex };
+    padding-right: 70px;
+`
+
+export const ColumnTwo = styled.div<IColumn>`
+    ${({flex})=> flex};
+`
+
+export const TitleLogin = styled.p`
+    font-family: 'Open Sans';
+    font-family: normal;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 44px;
+`
+
+export const SubTitleLogin = styled.p`
+    font-family: 'Open Sans';
+    font-family: normal;
+    font-weight: 400;
+    font-size: 18px;
+    width: 320px;
+    margin-bottom: 35px;
+    line-height: 25px;
 `
