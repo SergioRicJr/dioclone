@@ -25,7 +25,7 @@ export const Title = styled.h2`
 
 export const ColumnOne = styled.div<IColumn>`
     ${({flex})=> flex };
-    margin-right: 70px;
+    padding-right: 20px;
 `
 
 export const ColumnTwo = styled.div<IColumn>`

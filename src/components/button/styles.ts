@@ -10,7 +10,7 @@ export const ButtonContainer = styled.button<IButtonStyled>`
     color: #FFFF;
     padding: 2px 12px;
     min-width: 120px;
-    width: 100%;
+    width: 70%;
 
     &:hover {
         opacity: 0.6;
